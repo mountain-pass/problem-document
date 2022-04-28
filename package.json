@@ -1,5 +1,5 @@
 {
-  "name": "@mountain-pass/problem-document",
+  "name": "@mountainpass/problem-document",
   "description": "A basic RFC7807 Problem Document with basic type checking and autocomplete",
   "scripts": {
     "build": "npx projen build",
