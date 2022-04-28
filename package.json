@@ -1,5 +1,6 @@
 {
-  "name": "problem-document",
+  "name": "@mountain-pass/problem-document",
+  "description": "A basic RFC7807 Problem Document with basic type checking and autocomplete",
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
@@ -12,6 +13,7 @@
     "post-compile": "npx projen post-compile",
     "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
+    "prepare": "npx projen prepare",
     "release": "npx projen release",
     "test": "npx projen test",
     "test:update": "npx projen test:update",
@@ -22,6 +24,9 @@
     "projen": "npx projen"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
+    "@types/http-status-codes": "^1.2.0",
     "@types/jest": "^27.4.1",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -30,6 +35,8 @@
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-import": "^2.26.0",
+    "http-status-codes": "^2.2.0",
+    "husky": "^7.0.4",
     "jest": "^27",
     "jest-junit": "^13",
     "json-schema": "^0.4.0",
