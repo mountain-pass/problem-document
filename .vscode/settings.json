@@ -3,6 +3,7 @@
         "cobertura",
         "commitlint",
         "lcov",
+        "mountainpass",
         "projen",
         "projenrc",
         "unbump"
