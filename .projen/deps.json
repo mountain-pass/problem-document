@@ -32,6 +32,10 @@
       "type": "build"
     },
     {
+      "name": "eslint-config-prettier",
+      "type": "build"
+    },
+    {
       "name": "eslint-import-resolver-node",
       "type": "build"
     },
@@ -41,6 +45,22 @@
     },
     {
       "name": "eslint-plugin-import",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-jsdoc",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-jsdoc-typescript",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-prettier",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-unicorn",
       "type": "build"
     },
     {
@@ -71,8 +91,7 @@
       "type": "build"
     },
     {
-      "name": "npm-check-updates",
-      "version": "^12",
+      "name": "prettier",
       "type": "build"
     },
     {
@@ -86,6 +105,11 @@
     },
     {
       "name": "ts-jest",
+      "type": "build"
+    },
+    {
+      "name": "typedoc",
+      "version": "^0.21.4",
       "type": "build"
     },
     {

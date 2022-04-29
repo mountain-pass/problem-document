@@ -1,17 +1,21 @@
 {
   "name": "@mountainpass/problem-document",
   "description": "A basic RFC7807 Problem Document with basic type checking and autocomplete",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mountain-pass/problem-document"
+  },
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",
+    "docgen": "npx projen docgen",
     "eject": "npx projen eject",
     "eslint": "npx projen eslint",
     "package": "npx projen package",
     "post-compile": "npx projen post-compile",
-    "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
     "prepare": "npx projen prepare",
     "release": "npx projen release",
@@ -19,9 +23,14 @@
     "test:update": "npx projen test:update",
     "test:watch": "npx projen test:watch",
     "unbump": "npx projen unbump",
-    "upgrade": "npx projen upgrade",
     "watch": "npx projen watch",
     "projen": "npx projen"
+  },
+  "author": {
+    "name": "Mountain Pass",
+    "email": "Mountain Pass <info@mountain-pass.com.au>",
+    "url": "https://mountain-pass.com.au",
+    "organization": "Mountain Pass"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
@@ -32,26 +41,41 @@
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "eslint": "^8",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.2.9",
+    "eslint-plugin-jsdoc-typescript": "^2.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unicorn": "^42.0.0",
     "http-status-codes": "^2.2.0",
     "husky": "^7.0.4",
     "jest": "^27",
     "jest-junit": "^13",
     "json-schema": "^0.4.0",
-    "npm-check-updates": "^12",
+    "prettier": "^2.6.2",
     "projen": "^0.54.50",
     "standard-version": "^9",
     "ts-jest": "^27.1.4",
+    "typedoc": "^0.21.4",
     "typescript": "^4.6.3"
   },
+  "keywords": [
+    "document",
+    "problem",
+    "rfc7807"
+  ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "homepage": "https://github.com/mountain-pass/problem-document",
   "publishConfig": {
     "access": "public"
   },
   "version": "0.0.0",
+  "bugs": {
+    "url": "https://github.com/mountain-pass/problem-document/issues"
+  },
   "jest": {
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.ts?(x)",
