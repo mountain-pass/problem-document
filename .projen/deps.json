@@ -9,6 +9,10 @@
       "type": "build"
     },
     {
+      "name": "@mountainpass/projen-typescript-library",
+      "type": "build"
+    },
+    {
       "name": "@types/http-status-codes",
       "type": "build"
     },
@@ -29,6 +33,10 @@
     {
       "name": "@typescript-eslint/parser",
       "version": "^5",
+      "type": "build"
+    },
+    {
+      "name": "cspell",
       "type": "build"
     },
     {
@@ -105,11 +113,17 @@
     },
     {
       "name": "ts-jest",
+      "version": "^27",
+      "type": "build"
+    },
+    {
+      "name": "ts-node",
+      "version": "^9",
       "type": "build"
     },
     {
       "name": "typedoc",
-      "version": "^0.21.4",
+      "version": "^0.22.15",
       "type": "build"
     },
     {

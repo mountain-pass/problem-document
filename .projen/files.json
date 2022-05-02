@@ -1,5 +1,6 @@
 {
   "files": [
+    ".commitlintrc.json",
     ".eslintrc.json",
     ".gitattributes",
     ".github/dependabot.yml",
@@ -8,6 +9,8 @@
     ".github/workflows/pull-request-lint.yml",
     ".github/workflows/release.yml",
     ".gitignore",
+    ".husky/commit-msg",
+    ".husky/pre-commit",
     ".mergify.yml",
     ".npmignore",
     ".prettierignore",

@@ -50,3 +50,6 @@ junit.xml
 /lib
 /dist/
 !/.eslintrc.json
+!/.husky/pre-commit
+!/.commitlintrc.json
+!/.husky/commit-msg
