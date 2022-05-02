@@ -29,13 +29,12 @@
   "author": {
     "name": "Mountain Pass",
     "email": "info@mountain-pass.com.au",
-    "url": "https://mountain-pass.com.au",
     "organization": true
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
-    "@mountainpass/projen-typescript-library": "^0.0.1",
+    "@mountainpass/projen-typescript-library": "^0.1.0",
     "@types/http-status-codes": "^1.2.0",
     "@types/jest": "^27.4.1",
     "@types/node": "^12",

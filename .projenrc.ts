@@ -24,6 +24,10 @@ const project = new MountainPassTypeScriptProject({
     // "eslint-plugin-security": "^1.4.0",
   ] /* Build dependencies for this module. */,
   keywords: ["problem-details", "rfc7807"],
+  repositoryUrl: `https://github.com/mountain-pass/problem-document.git`,
+  author: "Mountain Pass",
+  authorAddress: "info@mountain-pass.com.au",
+  defaultReleaseBranch: "main",
 });
 
 project.addContributors("Tom Howard <tom@mountainpass.com.au>");
