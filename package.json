@@ -34,7 +34,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
     "@commitlint/config-conventional": "^16.2.4",
-    "@mountainpass/projen-typescript-library": "^0.1.0",
+    "@mountainpass/projen-typescript-library": "^0.1.8",
     "@types/http-status-codes": "^1.2.0",
     "@types/jest": "^27.4.1",
     "@types/node": "^12",

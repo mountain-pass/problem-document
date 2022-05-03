@@ -970,10 +970,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mountainpass/projen-typescript-library@^0.1.0":
-  "integrity" "sha512-2S27pZeXWm33RQX14LD93MlNMjnffFz+szQ/J7k+YOB9UAguDgMYKLz4a0fhj+8UJ3xER2AmVhBGkTadYg1rHg=="
-  "resolved" "https://registry.npmjs.org/@mountainpass/projen-typescript-library/-/projen-typescript-library-0.1.7.tgz"
-  "version" "0.1.7"
+"@mountainpass/projen-typescript-library@^0.1.8":
+  "integrity" "sha512-HIv7/+uLC9BvQUdemSomJrVtm13LAVhJTe3iiNPC75rwkVUye22svgsYF6JVVQQyS67RS5t4lBk/qIC/1WksGA=="
+  "resolved" "https://registry.npmjs.org/@mountainpass/projen-typescript-library/-/projen-typescript-library-0.1.8.tgz"
+  "version" "0.1.8"
 
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
