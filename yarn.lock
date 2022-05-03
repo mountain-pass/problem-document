@@ -971,9 +971,9 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@mountainpass/projen-typescript-library@^0.1.0":
-  version "0.1.1"
-  resolved "https://registry.npmjs.org/@mountainpass/projen-typescript-library/-/projen-typescript-library-0.1.1.tgz"
-  integrity sha512-1ADEmCix7Ysca8gUvkpyBWYKjC26PnLWRFH5KtWxzvFNhlvwK5H7cNd5LXpO3zqQ3e8LpTJYmbgw2ZH0OP9NoA==
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@mountainpass/projen-typescript-library/-/projen-typescript-library-0.1.7.tgz#f354bacb362b37b9a3532a0fa27b948021c1d0ab"
+  integrity sha512-2S27pZeXWm33RQX14LD93MlNMjnffFz+szQ/J7k+YOB9UAguDgMYKLz4a0fhj+8UJ3xER2AmVhBGkTadYg1rHg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
