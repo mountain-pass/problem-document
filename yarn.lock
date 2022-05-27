@@ -849,8 +849,8 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@mountainpass/projen-typescript-library@^0.1.8":
-  version "0.1.31"
-  resolved "https://registry.yarnpkg.com/@mountainpass/projen-typescript-library/-/projen-typescript-library-0.1.31.tgz#bf2f0c99c52173fe620b44f79e5927931c512f80"
+  version "0.1.32"
+  resolved "https://registry.yarnpkg.com/@mountainpass/projen-typescript-library/-/projen-typescript-library-0.1.32.tgz#550f008190807da8f8f6f2030f2013011a1c7f9e"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
