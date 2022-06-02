@@ -43,6 +43,44 @@ const project = new TypeScriptProject({
   keywords: ["problem-details", "rfc7807"],
   defaultReleaseBranch: "main",
   projenrcTs: true,
+  dependabotOptions: {
+    labels: ["auto-approve"],
+  },
+  jestOptions: {
+    jestConfig: {
+      coverageThreshold: {
+        branches: 100,
+        functions: 100,
+        lines: 100,
+        statements: 100,
+      },
+    },
+  },
+  autoApproveUpgrades: true,
+  autoApproveOptions: {
+    allowedUsernames: ["dependabot[bot]"],
+    label: "auto-approve",
+    secret: "GITHUB_TOKEN",
+  },
+  githubOptions: {
+    pullRequestLintOptions: {
+      semanticTitleOptions: {
+        types: [
+          "build",
+          "chore",
+          "ci",
+          "docs",
+          "feat",
+          "fix",
+          "perf",
+          "refactor",
+          "revert",
+          "style",
+          "test",
+        ],
+      },
+    },
+  },
 });
 
 const recommended = new Recommended(project, {
