@@ -4,7 +4,6 @@
 !/.projen/deps.json
 !/.projen/files.json
 !/.github/workflows/pull-request-lint.yml
-!/.github/workflows/auto-approve.yml
 !/package.json
 !/LICENSE
 !/.npmignore
@@ -40,7 +39,7 @@ junit.xml
 /dist/version.txt
 !/.github/workflows/release.yml
 !/.mergify.yml
-!/.github/dependabot.yml
+!/.github/workflows/upgrade-main.yml
 !/.github/pull_request_template.md
 !/.prettierignore
 !/.prettierrc.json
@@ -51,7 +50,10 @@ junit.xml
 /lib
 /dist/
 !/.eslintrc.json
-!/.vscode/extensions.json
-!/.husky/pre-commit
 !/.commitlintrc.json
+!/CODE_OF_CONDUCT.md
+!/.husky/pre-commit
 !/.husky/commit-msg
+!/.husky/pre-push
+!/.vscode/extensions.json
+!/.cspell.json

@@ -60,3 +60,24 @@ test("createEmptyWithExtension", () => {
   expect(type).toBeUndefined();
   expect(other).toEqual({ foo: "bar" });
 });
+
+test("example from RFC", () => {
+  const problemDocument = new ProblemDocument({
+    type: "https://example.com/probs/out-of-credit",
+    title: "You do not have enough credit.",
+    detail: "Your current balance is 30, but that costs 50.",
+    instance: "/account/12345/msgs/abc",
+    balance: 30,
+    accounts: ["/account/12345", "/account/67890"],
+  });
+  expect(problemDocument).toBeInstanceOf(ProblemDocument);
+  const { type, title, detail, instance, balance, accounts, ...other } =
+    problemDocument;
+  expect(type).toEqual("https://example.com/probs/out-of-credit");
+  expect(title).toEqual("You do not have enough credit.");
+  expect(detail).toEqual("Your current balance is 30, but that costs 50.");
+  expect(instance).toEqual("/account/12345/msgs/abc");
+  expect(balance).toEqual(30);
+  expect(accounts).toEqual(["/account/12345", "/account/67890"]);
+  expect(other).toEqual({});
+});
