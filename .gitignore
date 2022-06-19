@@ -51,10 +51,13 @@ junit.xml
 /lib
 /dist/
 !/.eslintrc.json
-!/.commitlintrc.json
+!/.vscode/settings.json
+!/.eslintignore
+!/.eslintrc-json.json
 !/CODE_OF_CONDUCT.md
+!/.cspell.json
+!/.commitlintrc.json
+!/.vscode/extensions.json
 !/.husky/pre-commit
 !/.husky/commit-msg
 !/.husky/pre-push
-!/.vscode/extensions.json
-!/.cspell.json

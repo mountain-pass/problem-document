@@ -83,14 +83,14 @@ const project = new TypeScriptProject({
   },
 });
 
-const recommended = new Recommended(project, {
+new Recommended(project, {
   cSpellOptions: { language: "en-GB", ignorePaths: ["docs"] },
 });
 
-new CodeOfConduct(
-  project,
-  { contactMethod: "tom@mountain-pass.com.au" },
-  { cSpell: recommended.cSpell }
-);
+new CodeOfConduct(project, { contactMethod: "tom@mountain-pass.com.au" });
+
+gitHubber.addToProject(project);
+npmReleaser.addToProject(project);
+organisational.addToProject(project);
 
 project.synth();
