@@ -12,13 +12,10 @@
     "eslint-plugin-unicorn": "Major version upgrade; blocked by eslint 8.x constraint",
     "http-status-codes": "Used only in tests; minor update with no security impact",
     "husky": "Major version upgrade; requires migration to new config format",
-    "jest": "Pinned to ^27 by projen; upgrade requires projen and ts-jest migration",
+    "jest": "Pinned to ^27; upgrade requires ts-jest migration",
     "jest-junit": "Major version upgrade; blocked by jest 27.x constraint",
-    "npm-check-updates": "Major version upgrade; used only for maintenance scripts",
     "prettier": "Major version upgrade; may cause formatting changes across codebase",
-    "projen": "Pinned to ^0.58; upgrade may cause breaking changes to project config",
     "ts-jest": "Pinned to jest 27.x; upgrade requires jest migration",
-    "ts-node": "Minor update; low priority with no security impact",
     "typescript": "Major version upgrade; requires codebase compatibility verification"
   }
 }
