@@ -9,12 +9,10 @@
     "eslint-plugin-jsdoc": "Major version upgrade; blocked by eslint 8.x constraint",
     "eslint-plugin-jsonc": "Major version upgrade; blocked by eslint 8.x constraint",
     "eslint-plugin-no-secrets": "Major version upgrade; blocked by eslint 8.x constraint",
-    "eslint-plugin-prettier": "Major version upgrade; blocked by eslint 8.x constraint",
     "eslint-plugin-unicorn": "Major version upgrade; blocked by eslint 8.x constraint",
     "husky": "Major version upgrade; requires migration to new config format",
     "jest": "Pinned to ^27; upgrade requires ts-jest migration",
     "jest-junit": "Major version upgrade; blocked by jest 27.x constraint",
-    "prettier": "Major version upgrade; may cause formatting changes across codebase",
     "ts-jest": "Pinned to jest 27.x; upgrade requires jest migration"
   }
 }
