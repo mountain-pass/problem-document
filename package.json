@@ -29,7 +29,7 @@
     "@commitlint/config-conventional": "^17.0.2",
     "@types/http-status-codes": "^1.2.0",
     "@types/jest": "^27.4.1",
-    "@types/node": "^14",
+    "@types/node": "^22",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "cspell": "*",
