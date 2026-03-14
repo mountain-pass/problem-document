@@ -23,6 +23,8 @@ jobs:
         run: yarn install --check-files
       - name: build
         run: npx projen build
+      - name: Check for outdated dependencies
+        run: npx dry-aged-deps --check
       - id: self_mutation
         name: Find mutations
         run: |-

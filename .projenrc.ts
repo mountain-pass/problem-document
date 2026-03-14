@@ -39,6 +39,7 @@ const project = new TypeScriptProject({
     "http-status-codes",
     "@types/http-status-codes",
     "@mountainpass/cool-bits-for-projen",
+    "dry-aged-deps",
   ] /* Build dependencies for this module. */,
   keywords: ["problem-details", "rfc7807"],
   defaultReleaseBranch: "main",
@@ -83,11 +84,23 @@ const project = new TypeScriptProject({
   },
 });
 
-new Recommended(project, {
-  cSpellOptions: { language: "en-GB", ignorePaths: ["docs"] },
+const recommended = new Recommended(project, {
+  cSpellOptions: {
+    language: "en-GB",
+    ignorePaths: ["docs", ".dry-aged-deps.json"],
+  },
 });
 
+// Add dry-aged-deps check to the pre-push hook
+recommended.husky.addHook("pre-push", "npx dry-aged-deps --check");
+
 new CodeOfConduct(project, { contactMethod: "tom@mountain-pass.com.au" });
+
+// Add dry-aged-deps check to the build workflow
+project.buildWorkflow?.addPostBuildSteps({
+  name: "Check for outdated dependencies",
+  run: "npx dry-aged-deps --check",
+});
 
 gitHubber.addToProject(project);
 npmReleaser.addToProject(project);

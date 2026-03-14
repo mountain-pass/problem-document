@@ -2449,6 +2449,11 @@ dotgitignore@^2.1.0:
     find-up "^3.0.0"
     minimatch "^3.0.4"
 
+dry-aged-deps@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/dry-aged-deps/-/dry-aged-deps-2.6.0.tgz#d011e791bdc3b795f95660716ab2c65b8ca39246"
+  integrity sha512-neznE/c94RF2yOV7O3UXbXEL0Ohp6IX8T73h4t03+keCYXLmRIT/yhjGZh8IIvL75JN+HDyOoQQGvIIEvU4GSg==
+
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"

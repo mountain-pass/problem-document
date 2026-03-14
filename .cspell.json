@@ -14,6 +14,7 @@
     "eslint-plugin",
     "parser",
     "cspell",
+    "dry-aged-deps",
     "eslint-config-prettier",
     "eslint-import-resolver-node",
     "eslint-import-resolver-typescript",
@@ -90,6 +91,7 @@
   ],
   "ignorePaths": [
     "docs",
+    ".dry-aged-deps.json",
     ".eslintignore",
     ".eslintrc-json.json",
     ".eslintrc.json",
