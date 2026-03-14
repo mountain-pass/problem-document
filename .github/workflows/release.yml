@@ -11,6 +11,7 @@ jobs:
       contents: write
     outputs:
       latest_commit: ${{ steps.git_remote.outputs.latest_commit }}
+      tag_exists: ${{ steps.check_tag.outputs.tag_exists }}
     env:
       CI: "true"
     steps:
@@ -24,13 +25,49 @@ jobs:
           git config user.email "github-actions@github.com"
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
-      - name: release
-        run: npm run release
+      - name: Determine version
+        id: version
+        run: |
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          LATEST_VERSION=${LATEST_TAG#v}
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$LATEST_VERSION"
+          NEXT_PATCH=$((PATCH + 1))
+          NEXT_VERSION="${MAJOR}.${MINOR}.${NEXT_PATCH}"
+          echo "version=$NEXT_VERSION" >> $GITHUB_OUTPUT
+          echo "tag=v$NEXT_VERSION" >> $GITHUB_OUTPUT
+          echo "Next version: $NEXT_VERSION"
+      - name: Check if tag already exists
+        id: check_tag
+        run: |
+          if git rev-parse "${{ steps.version.outputs.tag }}" >/dev/null 2>&1; then
+            echo "tag_exists=true" >> $GITHUB_OUTPUT
+            echo "Tag ${{ steps.version.outputs.tag }} already exists, skipping release"
+          else
+            echo "tag_exists=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Bump version
+        if: steps.check_tag.outputs.tag_exists == 'false'
+        run: npm version ${{ steps.version.outputs.version }} --no-git-tag-version
+      - name: Build
+        if: steps.check_tag.outputs.tag_exists == 'false'
+        run: npm run build
+      - name: Generate changelog
+        if: steps.check_tag.outputs.tag_exists == 'false'
+        run: |
+          mkdir -p dist
+          echo "${{ steps.version.outputs.tag }}" > dist/releasetag.txt
+          echo "${{ steps.version.outputs.version }}" > dist/version.txt
+          git log $(git describe --tags --abbrev=0 2>/dev/null || echo "")..HEAD --pretty=format:"* %s (%h)" > dist/changelog.md
+      - name: Tag release
+        if: steps.check_tag.outputs.tag_exists == 'false'
+        run: |
+          git tag -a ${{ steps.version.outputs.tag }} -m "chore(release): ${{ steps.version.outputs.version }}"
+          git push origin ${{ steps.version.outputs.tag }}
       - name: Check for new commits
         id: git_remote
         run: echo "latest_commit=$(git ls-remote origin -h ${{ github.ref }} | cut -f1)" >> $GITHUB_OUTPUT
       - name: Upload artifact
-        if: ${{ steps.git_remote.outputs.latest_commit == github.sha }}
+        if: steps.check_tag.outputs.tag_exists == 'false' && steps.git_remote.outputs.latest_commit == github.sha
         uses: actions/upload-artifact@v4
         with:
           name: build-artifact
@@ -41,7 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    if: needs.release.outputs.latest_commit == github.sha
+    if: needs.release.outputs.tag_exists == 'false' && needs.release.outputs.latest_commit == github.sha
     steps:
       - uses: actions/setup-node@v4
       - name: Download build artifacts
@@ -61,7 +98,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    if: needs.release.outputs.latest_commit == github.sha
+    if: needs.release.outputs.tag_exists == 'false' && needs.release.outputs.latest_commit == github.sha
     steps:
       - uses: actions/setup-node@v4
       - name: Download build artifacts

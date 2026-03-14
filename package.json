@@ -12,7 +12,6 @@
     "eslint:json": "eslint --no-eslintrc --no-error-on-unmatched-pattern --config .eslintrc-json.json --ext .json .",
     "package": "mkdir -p dist/js && npm pack --pack-destination dist/js",
     "prepare": "husky install",
-    "release": "rm -fr dist && standard-version && npm run build",
     "spellcheck": "cspell lint --gitignore --dot --show-suggestions -e \".git/**\" \"**\"",
     "test": "jest --passWithNoTests --all --updateSnapshot && npm run eslint && npm run spellcheck && npm run eslint:json",
     "test:update": "jest --updateSnapshot",
@@ -51,7 +50,6 @@
     "jest-junit": "^13",
     "json-schema": "^0.4.0",
     "prettier": "^2.6.2",
-    "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^4.6.3"
   },
