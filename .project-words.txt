@@ -1,2 +1,4 @@
 Hubber
 deps
+mergify
+yarnrc
