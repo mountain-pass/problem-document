@@ -18,7 +18,6 @@
     "jest": "Pinned to ^27; upgrade requires ts-jest migration",
     "jest-junit": "Major version upgrade; blocked by jest 27.x constraint",
     "prettier": "Major version upgrade; may cause formatting changes across codebase",
-    "ts-jest": "Pinned to jest 27.x; upgrade requires jest migration",
-    "typescript": "Major version upgrade; requires codebase compatibility verification"
+    "ts-jest": "Pinned to jest 27.x; upgrade requires jest migration"
   }
 }
