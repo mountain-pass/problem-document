@@ -16,7 +16,6 @@
     ".husky/commit-msg",
     ".husky/pre-commit",
     ".husky/pre-push",
-    ".mergify.yml",
     ".npmignore",
     ".prettierignore",
     ".prettierrc.json",

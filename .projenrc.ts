@@ -64,6 +64,7 @@ const project = new TypeScriptProject({
     secret: "GITHUB_TOKEN",
   },
   githubOptions: {
+    mergify: false,
     pullRequestLintOptions: {
       semanticTitleOptions: {
         types: [
