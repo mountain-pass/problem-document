@@ -134,6 +134,7 @@
       }
     ],
     "unicorn/prefer-node-protocol": "off",
+    "unicorn/expiring-todo-comments": "off",
     "jsdoc/require-jsdoc": [
       "error",
       {
