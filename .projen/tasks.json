@@ -129,7 +129,7 @@
           "exec": "mkdir -p dist/js"
         },
         {
-          "exec": "mv $(npm pack 2>/dev/null | tail -1) dist/js/"
+          "exec": "mv $(npm pack) dist/js/"
         }
       ]
     },

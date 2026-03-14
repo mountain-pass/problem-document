@@ -40,6 +40,10 @@
       "type": "build"
     },
     {
+      "name": "dry-aged-deps",
+      "type": "build"
+    },
+    {
       "name": "eslint-config-prettier",
       "type": "build"
     },

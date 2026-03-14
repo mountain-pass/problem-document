@@ -133,6 +133,7 @@
   },
   "types": "lib/index.d.ts",
   "contributors": [
+    "Claude <noreply@anthropic.com>",
     "Tom Howard <tom@windyroad.com.au>",
     "dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
   ],
