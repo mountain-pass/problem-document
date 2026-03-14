@@ -36,23 +36,6 @@ run the following command in your project
 yarn add @mountainpass/problem-document
 ```
 
-### projen
-
-Add `@mountainpass/problem-document` to your `deps` in your `.projen.js` or `projen.ts`. e.g.
-
-```js
-///...
-const project = new NodeProject({
-    //...
-    deps: [
-        //...
-        '@mountainpass/problem-document'
-    ]
-});
-```
-
-and run `npx projen`
-
 ## Usage
 
 ```js

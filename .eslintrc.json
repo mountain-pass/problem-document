@@ -45,13 +45,10 @@
   },
   "ignorePatterns": [
     "*.js",
-    "!.projenrc.ts",
     "*.d.ts",
     "node_modules/",
     "*.generated.ts",
-    "coverage",
-    "!.projenrc.ts",
-    "!projenrc/**/*.ts"
+    "coverage"
   ],
   "rules": {
     "prettier/prettier": [
@@ -65,10 +62,7 @@
       {
         "devDependencies": [
           "**/test/**",
-          "**/build-tools/**",
-          "**/projenrc/**",
-          ".projenrc.ts",
-          "projenrc/**/*.ts"
+          "**/build-tools/**"
         ],
         "optionalDependencies": false,
         "peerDependencies": true
@@ -174,24 +168,6 @@
   "overrides": [
     {
       "files": [
-        ".projenrc.ts"
-      ],
-      "rules": {
-        "@typescript-eslint/no-require-imports": "off",
-        "import/no-extraneous-dependencies": "off"
-      }
-    },
-    {
-      "files": [
-        ".projenrc.js",
-        ".projenrc.ts"
-      ],
-      "rules": {
-        "unicorn/prefer-module": "off"
-      }
-    },
-    {
-      "files": [
         "*.json",
         "*.json5",
         "*.jsonc"
@@ -211,10 +187,7 @@
         ".npmignore",
         ".prettierignore",
         ".prettierrc.json",
-        ".projen/deps.json",
-        ".projen/files.json",
-        ".projen/tasks.json",
-        ".vscode/settings.json",
+".vscode/settings.json",
         "LICENSE",
         "package.json",
         "tsconfig.dev.json",
