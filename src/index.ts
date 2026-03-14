@@ -131,7 +131,6 @@ type StatusCode =
   | 423
   /**
    * METHOD_FAILURE
-   *
    * @deprecated
    * Official Documentation @ https://tools.ietf.org/rfcdiff?difftype=--hwdiff&url2=draft-ietf-webdav-protocol-06.txt
    *
@@ -389,7 +388,6 @@ type StatusCode =
   | 415
   /**
    * USE_PROXY
-   *
    * @deprecated
    * Official Documentation @ https://tools.ietf.org/html/rfc7231#section-6.4.6
    *
@@ -500,7 +498,6 @@ export class ProblemDocument implements ProblemDocumentProperties {
   /**
    *
    * construct a new ProblemDocument instance
-   *
    * @param data properties to assign to the new instance
    */
   constructor(data: ProblemDocumentProperties) {

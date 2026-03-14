@@ -1,13 +1,3 @@
 {
-  "exclude": {
-    "eslint": "Pinned to ^8; upgrade to 9+ requires flat config migration and plugin compatibility",
-    "eslint-config-prettier": "Major version upgrade; blocked by eslint 8.x constraint",
-    "eslint-import-resolver-node": "Pinned by eslint-plugin-import compatibility",
-    "eslint-import-resolver-typescript": "Major version upgrade; blocked by eslint 8.x constraint",
-    "eslint-plugin-import": "Pinned by eslint 8.x compatibility",
-    "eslint-plugin-jsdoc": "Major version upgrade; blocked by eslint 8.x constraint",
-    "eslint-plugin-jsonc": "Major version upgrade; blocked by eslint 8.x constraint",
-    "eslint-plugin-no-secrets": "Major version upgrade; blocked by eslint 8.x constraint",
-    "eslint-plugin-unicorn": "Major version upgrade; blocked by eslint 8.x constraint"
-  }
+  "exclude": {}
 }

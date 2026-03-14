@@ -2,4 +2,6 @@ deps
 mergify
 npx
 projen
+tseslint
+vars
 yarnrc
