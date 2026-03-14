@@ -114,7 +114,8 @@
     "package.json",
     "tsconfig.dev.json",
     "tsconfig.json",
-    ".cspell.json"
+    ".cspell.json",
+    ".dry-aged-deps.json"
   ],
   "overrides": [
     {
