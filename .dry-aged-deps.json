@@ -3,7 +3,6 @@
     "@commitlint/cli": "Major version upgrade; requires migration to v20 config format",
     "@commitlint/config-conventional": "Major version upgrade; blocked by @commitlint/cli constraint",
     "@types/jest": "Pinned to jest 27.x; upgrade requires jest 29+ migration",
-    "@types/node": "Pinned to ^14; upgrade requires verifying Node.js API compatibility",
     "cspell": "Major version upgrade; requires compatibility testing with current config",
     "eslint": "Pinned to ^8; upgrade to 9+ requires flat config migration and plugin compatibility",
     "eslint-config-prettier": "Major version upgrade; blocked by eslint 8.x constraint",
