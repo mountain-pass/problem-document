@@ -96,6 +96,12 @@ recommended.husky.addHook("pre-push", "npx dry-aged-deps --check");
 
 new CodeOfConduct(project, { contactMethod: "tom@mountain-pass.com.au" });
 
+// Fix npm pack command for newer npm versions
+const packageTask = project.tasks.tryFind("package")!;
+packageTask.reset();
+packageTask.exec("mkdir -p dist/js");
+packageTask.exec("npm pack --pack-destination dist/js");
+
 // Add dry-aged-deps check to the build workflow
 project.buildWorkflow?.addPostBuildSteps({
   name: "Check for outdated dependencies",
@@ -105,28 +111,70 @@ project.buildWorkflow?.addPostBuildSteps({
 // Upgrade deprecated GitHub Actions from v2/v3 to v4
 const buildWorkflow = project.github?.tryFindWorkflow("build");
 if (buildWorkflow?.file) {
-  buildWorkflow.file.addOverride("jobs.build.steps.0.uses", "actions/checkout@v4");
-  buildWorkflow.file.addOverride("jobs.build.steps.5.uses", "actions/upload-artifact@v4");
-  buildWorkflow.file.addOverride("jobs.self-mutation.steps.0.uses", "actions/checkout@v4");
-  buildWorkflow.file.addOverride("jobs.self-mutation.steps.1.uses", "actions/download-artifact@v4");
+  buildWorkflow.file.addOverride(
+    "jobs.build.steps.0.uses",
+    "actions/checkout@v4"
+  );
+  buildWorkflow.file.addOverride(
+    "jobs.build.steps.5.uses",
+    "actions/upload-artifact@v4"
+  );
+  buildWorkflow.file.addOverride(
+    "jobs.self-mutation.steps.0.uses",
+    "actions/checkout@v4"
+  );
+  buildWorkflow.file.addOverride(
+    "jobs.self-mutation.steps.1.uses",
+    "actions/download-artifact@v4"
+  );
 }
 
 const releaseWorkflow = project.github?.tryFindWorkflow("release");
 if (releaseWorkflow?.file) {
-  releaseWorkflow.file.addOverride("jobs.release.steps.0.uses", "actions/checkout@v4");
-  releaseWorkflow.file.addOverride("jobs.release.steps.5.uses", "actions/upload-artifact@v4");
-  releaseWorkflow.file.addOverride("jobs.release_github.steps.0.uses", "actions/setup-node@v4");
-  releaseWorkflow.file.addOverride("jobs.release_github.steps.1.uses", "actions/download-artifact@v4");
-  releaseWorkflow.file.addOverride("jobs.release_npm.steps.0.uses", "actions/setup-node@v4");
-  releaseWorkflow.file.addOverride("jobs.release_npm.steps.1.uses", "actions/download-artifact@v4");
+  releaseWorkflow.file.addOverride(
+    "jobs.release.steps.0.uses",
+    "actions/checkout@v4"
+  );
+  releaseWorkflow.file.addOverride(
+    "jobs.release.steps.5.uses",
+    "actions/upload-artifact@v4"
+  );
+  releaseWorkflow.file.addOverride(
+    "jobs.release_github.steps.0.uses",
+    "actions/setup-node@v4"
+  );
+  releaseWorkflow.file.addOverride(
+    "jobs.release_github.steps.1.uses",
+    "actions/download-artifact@v4"
+  );
+  releaseWorkflow.file.addOverride(
+    "jobs.release_npm.steps.0.uses",
+    "actions/setup-node@v4"
+  );
+  releaseWorkflow.file.addOverride(
+    "jobs.release_npm.steps.1.uses",
+    "actions/download-artifact@v4"
+  );
 }
 
 const upgradeWorkflow = project.github?.tryFindWorkflow("upgrade-main");
 if (upgradeWorkflow?.file) {
-  upgradeWorkflow.file.addOverride("jobs.upgrade.steps.0.uses", "actions/checkout@v4");
-  upgradeWorkflow.file.addOverride("jobs.upgrade.steps.4.uses", "actions/upload-artifact@v4");
-  upgradeWorkflow.file.addOverride("jobs.pr.steps.0.uses", "actions/checkout@v4");
-  upgradeWorkflow.file.addOverride("jobs.pr.steps.1.uses", "actions/download-artifact@v4");
+  upgradeWorkflow.file.addOverride(
+    "jobs.upgrade.steps.0.uses",
+    "actions/checkout@v4"
+  );
+  upgradeWorkflow.file.addOverride(
+    "jobs.upgrade.steps.4.uses",
+    "actions/upload-artifact@v4"
+  );
+  upgradeWorkflow.file.addOverride(
+    "jobs.pr.steps.0.uses",
+    "actions/checkout@v4"
+  );
+  upgradeWorkflow.file.addOverride(
+    "jobs.pr.steps.1.uses",
+    "actions/download-artifact@v4"
+  );
 }
 
 gitHubber.addToProject(project);
