@@ -17,7 +17,6 @@
 /.husky/commit-msg linguist-generated
 /.husky/pre-commit linguist-generated
 /.husky/pre-push linguist-generated
-/.mergify.yml linguist-generated
 /.npmignore linguist-generated
 /.prettierignore linguist-generated
 /.prettierrc.json linguist-generated
